@@ -3,3 +3,62 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implementation of off_feature_hierarchical_select_valid_item().
+ */
+function off_feature_hierarchical_select_valid_item($item, $params) {
+
+  if (!is_numeric($item) || $item < 1 ) {
+    return FALSE;
+  }
+
+  $term = taxonomy_term_load($item);
+  if (!$term) {
+    return FALSE;
+  }
+
+  $group = og_context();
+  $group_type = 'node';
+  $entity_type = 'term';
+  return (og_is_member($group_type, $group['gid'], $entity_type, $user));
+}
+
+// Empty hierarchical select hooks return standard behaviour. This is required
+// for some reason.
+function off_feature_hierarchical_select_params() {
+  return hs_taxonomy_hierarchical_select_params();
+}
+
+function off_feature_hierarchical_select_root_level() {
+  return hs_taxonomy_hierarchical_select_root_level();
+}
+
+function off_feature_hierarchical_select_children() {
+  return hs_taxonomy_hierarchical_select_children();
+}
+
+function off_feature_hierarchical_select_lineage() {
+  return hs_taxonomy_hierarchical_select_lineage();
+}
+
+function off_feature_hierarchical_select_item_get_label($item, $params) {
+  return hs_taxonomy_hierarchical_select_item_get_label();
+}
+
+function off_feature_hierarchical_select_create_item($label, $parent, $params) {
+  return hs_taxonomy_hierarchical_select_create_item();
+}
+
+function off_feature_hierarchical_select_entity_count() {
+  return hs_taxonomy_hierarchical_select_entity_count();
+}
+
+function off_feature_hierarchical_select_implementation_info() {
+  return hs_taxonomy_hierarchical_select_implementation_info();
+}
+
+function off_feature_hierarchical_select_config_info() {
+  return hs_taxonomy_hierarchical_select_config_info();
+}
+
