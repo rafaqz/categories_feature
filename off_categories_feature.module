@@ -5,7 +5,34 @@
  */
 
 /**
- * Implementation of off_feature_hierarchical_select_valid_item().
+ * Implements hook_menu().
+ */
+
+function off_categories_feature_menu() {
+  $items['taxonomy/category/add'] = array(
+    'page callback' => 'off_categories_feature_term_add_page',
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Provide users with a term add page for the category vocaculary.
+ *
+ * @return array
+ *   A Drupal build array.
+ */
+
+function off_categories_feature_term_add_page() {
+  og_context($group_type = 'node', $group = )
+  $vocabulary = taxonomy_vocabulary_machine_name_load('category');
+  module_load_include('inc', 'taxonomy', 'taxonomy.admin');
+  $form = 'taxonomy_form_term';
+  return drupal_render(drupal_get_form($form, $vocabulary));
+}
+
+/**
+ * Implements hook_hierarchical_select_valid_item().
  */
 function off_feature_hierarchical_select_valid_item($item, $params) {
 
