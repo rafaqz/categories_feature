@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Off Categories Feature feature.
  */
+
+include_once 'off_categories_feature.features.inc';
 
 /**
  * Implements hook_menu().
@@ -24,11 +26,21 @@ function off_categories_feature_menu() {
  */
 
 function off_categories_feature_term_add_page() {
-  og_context($group_type = 'node', $group = )
-  $vocabulary = taxonomy_vocabulary_machine_name_load('category');
+  // Set og context from url query.
+  $params = drupal_get_query_parameters();
+  if (!empty($params['og_group_ref'])) {
+    $group = node_load($params['og_group_ref']);
+    og_context('node', $group);
+  }
+
+  // Build taxonomy form.
   module_load_include('inc', 'taxonomy', 'taxonomy.admin');
-  $form = 'taxonomy_form_term';
-  return drupal_render(drupal_get_form($form, $vocabulary));
+  $vocabulary = taxonomy_vocabulary_machine_name_load('category');
+  drupal_set_title($title = $vocabulary->name, $output = CHECK_PLAIN);
+  $form_id = 'taxonomy_form_term';
+  //drupal_get_form('taxonomy_form_term', $form, &$form_state, $edit = array(), $vocabulary);
+  $edit = array();
+  return drupal_render(drupal_get_form($form_id, $edit, $vocabulary));
 }
 
 /**
