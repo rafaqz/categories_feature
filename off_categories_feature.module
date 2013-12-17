@@ -1,6 +1,8 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Off Categories Feature feature.
  */
+
+include_once 'off_categories_feature.features.inc';
 

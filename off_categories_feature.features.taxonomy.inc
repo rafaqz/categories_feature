@@ -12,7 +12,7 @@ function off_categories_feature_taxonomy_default_vocabularies() {
     'category' => array(
       'name' => 'Category',
       'machine_name' => 'category',
-      'description' => '',
+      'description' => 'Add a category to organise group content.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

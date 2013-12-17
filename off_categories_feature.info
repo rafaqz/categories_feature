@@ -19,6 +19,5 @@ features[field_instance][] = taxonomy_term-category-og_group_ref
 features[taxonomy][] = category
 features[user_permission][] = delete terms in 8
 features[user_permission][] = edit terms in 8
-features[views_view][] = category_term_reference_filter
 features_exclude[field][taxonomy_term-category-og_group_ref] = taxonomy_term-category-og_group_ref
 project path = sites/all/modules/features
