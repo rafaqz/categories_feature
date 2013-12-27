@@ -50,7 +50,7 @@ function off_categories_feature_field_default_field_instances() {
         ),
         'prepopulate' => array(
           'action' => 'hide',
-          'action_on_edit' => 1,
+          'action_on_edit' => 0,
           'fallback' => 'none',
           'og_context' => 0,
           'skip_perm' => 0,
