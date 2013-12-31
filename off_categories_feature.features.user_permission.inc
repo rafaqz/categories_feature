@@ -10,21 +10,28 @@
 function off_categories_feature_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: delete terms in 8.
-  $permissions['delete terms in 8'] = array(
-    'name' => 'delete terms in 8',
+  // Exported permission: 'add terms in category'.
+  $permissions['add terms in category'] = array(
+    'name' => 'add terms in category',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
+    'module' => 'taxonomy_access_fix',
+  );
+
+  // Exported permission: 'delete terms in category'.
+  $permissions['delete terms in category'] = array(
+    'name' => 'delete terms in category',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in 8.
-  $permissions['edit terms in 8'] = array(
-    'name' => 'edit terms in 8',
-    'roles' => array(
-      'Admin' => 'Admin',
-    ),
+  // Exported permission: 'edit terms in category'.
+  $permissions['edit terms in category'] = array(
+    'name' => 'edit terms in category',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
