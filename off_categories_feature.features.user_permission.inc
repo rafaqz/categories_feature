@@ -24,14 +24,22 @@ function off_categories_feature_user_default_permissions() {
   // Exported permission: 'delete terms in category'.
   $permissions['delete terms in category'] = array(
     'name' => 'delete terms in category',
-    'roles' => array(),
+    'roles' => array(
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in category'.
   $permissions['edit terms in category'] = array(
     'name' => 'edit terms in category',
-    'roles' => array(),
+    'roles' => array(
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+    ),
     'module' => 'taxonomy',
   );
 
