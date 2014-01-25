@@ -15,10 +15,13 @@ function off_categories_feature_block_view_collabco_groups_feature_group_toolbar
   $perm_string = "edit terms in " .  $vocabulary->vid;
   // Construct permission name string for the taxonomy bundle.
   // Add a menu link if the current user can create taxonomy terms in the bundle.
+  $og_context = og_context();
+  if (empty($og_context)) {
+    return;
+  }
   if (user_access($perm_string)) {
+    $gid = $og_context['gid'];
     $items = array();
-    $group = og_context();
-    $gid = $group['gid'];
     $options = collabco_groups_feature_prepopulate_query($gid);
     $text = t('Create ') . $vocabulary->name;
     $url = "node/$gid/taxonomy/$bundle/add/";
