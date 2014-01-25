@@ -6,3 +6,27 @@
 
 include_once 'off_categories_feature.features.inc';
 
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter();
+ */
+function off_categories_feature_block_view_collabco_groups_feature_group_toolbar_alter(&$data, $block) {
+  $bundle = 'category';
+  $vocabulary = taxonomy_vocabulary_machine_name_load($bundle);
+  $perm_string = "edit terms in " .  $vocabulary->vid;
+  // Construct permission name string for the taxonomy bundle.
+  // Add a menu link if the current user can create taxonomy terms in the bundle.
+  if (user_access($perm_string)) {
+    $items = array();
+    $group = og_context();
+    $gid = $group['gid'];
+    $options = collabco_groups_feature_prepopulate_query($gid);
+    $text = t('Create ') . $vocabulary->name;
+    $url = "node/$gid/taxonomy/$bundle/add/";
+    $data['content']['add-content-list']['#items']['term_category'] = l($text, $url, $options); 
+    // Link to view to edit all terms in vocab and group.
+    $text = t('View ') . $vocabulary->name . ' ' . t('terms');
+    $url = "node/$gid/taxonomy/$bundle/";
+    $data['content']['add-content-list']['#items']["view_term_$bundle"] = l($text, $url); 
+  }
+}
+
