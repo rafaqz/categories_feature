@@ -39,6 +39,7 @@ function off_categories_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'taxonomy',
   );
