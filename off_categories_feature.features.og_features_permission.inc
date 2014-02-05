@@ -14,6 +14,7 @@ function off_categories_feature_og_features_default_permissions() {
   $permissions['node:closed_group:update field_category field'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'member' => 'member',
     ),
   );
 
@@ -21,6 +22,7 @@ function off_categories_feature_og_features_default_permissions() {
   $permissions['node:closed_group:view field_category field'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'member' => 'member',
     ),
   );
 
