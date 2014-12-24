@@ -10,9 +10,9 @@
 function off_categories_feature_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-category-og_group_ref'
-  $field_instances['taxonomy_term-category-og_group_ref'] = array(
-    'bundle' => 'category',
+  // Exported field_instance: 'taxonomy_term-categories-og_group_ref'
+  $field_instances['taxonomy_term-categories-og_group_ref'] = array(
+    'bundle' => 'categories',
     'default_value' => NULL,
     'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,

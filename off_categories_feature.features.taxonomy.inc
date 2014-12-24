@@ -9,10 +9,10 @@
  */
 function off_categories_feature_taxonomy_default_vocabularies() {
   return array(
-    'category' => array(
+    'categories' => array(
       'name' => 'Category',
-      'machine_name' => 'category',
-      'description' => 'Add a category to organise group content.',
+      'machine_name' => 'categories',
+      'description' => 'Add a categories to organise group content.',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

@@ -10,9 +10,9 @@
 function off_categories_feature_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'add terms in category'.
-  $permissions['add terms in category'] = array(
-    'name' => 'add terms in category',
+  // Exported permission: 'add terms in categories'.
+  $permissions['add terms in categories'] = array(
+    'name' => 'add terms in categories',
     'roles' => array(
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
@@ -21,9 +21,9 @@ function off_categories_feature_user_default_permissions() {
     'module' => 'taxonomy_access_fix',
   );
 
-  // Exported permission: 'delete terms in category'.
-  $permissions['delete terms in category'] = array(
-    'name' => 'delete terms in category',
+  // Exported permission: 'delete terms in categories'.
+  $permissions['delete terms in categories'] = array(
+    'name' => 'delete terms in categories',
     'roles' => array(
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
@@ -32,9 +32,9 @@ function off_categories_feature_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in category'.
-  $permissions['edit terms in category'] = array(
-    'name' => 'edit terms in category',
+  // Exported permission: 'edit terms in categories'.
+  $permissions['edit terms in categories'] = array(
+    'name' => 'edit terms in categories',
     'roles' => array(
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',

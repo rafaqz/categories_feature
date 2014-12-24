@@ -21,7 +21,7 @@ function off_categories_feature_block_view_collabco_groups_feature_group_toolbar
   }
   
   $gid = $og_context['gid'];
-  $bundle = 'category';
+  $bundle = 'categories';
   $group_type = 'node';
 
   // Dont need this without og permissions...
@@ -44,7 +44,7 @@ function off_categories_feature_block_view_collabco_groups_feature_group_toolbar
     $options = collabco_groups_feature_prepopulate_query($gid);
     $text = t('Create ') . $vocabulary->name;
     $url = "node/$gid/taxonomy/$bundle/add/";
-    $data['content']['add-content-list']['#items']['term_category'] = l($text, $url, $options); 
+    $data['content']['add-content-list']['#items']['term_categories'] = l($text, $url, $options); 
     // Link to view to edit all terms in vocab and group.
     $text = t('View ') . $vocabulary->name . ' ' . t('terms');
     $url = "node/$gid/taxonomy/$bundle/";
