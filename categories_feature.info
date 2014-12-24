@@ -1,4 +1,4 @@
-name = Off Categories Feature
+name = Categories Feature
 description = Provides a hierarchical categorisation taxonomy with group awareness.
 core = 7.x
 package = Collabco

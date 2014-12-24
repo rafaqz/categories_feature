@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_categories_feature.features.taxonomy.inc
+ * categories_feature.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function off_categories_feature_taxonomy_default_vocabularies() {
+function categories_feature_taxonomy_default_vocabularies() {
   return array(
     'categories' => array(
       'name' => 'Category',

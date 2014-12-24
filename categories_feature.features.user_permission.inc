@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_categories_feature.features.user_permission.inc
+ * categories_feature.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function off_categories_feature_user_default_permissions() {
+function categories_feature_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'add terms in categories'.

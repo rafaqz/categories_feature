@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_categories_feature.features.field_instance.inc
+ * categories_feature.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function off_categories_feature_field_default_field_instances() {
+function categories_feature_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'taxonomy_term-categories-og_group_ref'
