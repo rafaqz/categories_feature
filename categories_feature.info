@@ -19,3 +19,4 @@ features[user_permission][] = add terms in categories
 features[user_permission][] = delete terms in categories
 features[user_permission][] = edit terms in categories
 features[variable][] = pathauto_taxonomy_term_categories_pattern
+features[views_view][] = categories
